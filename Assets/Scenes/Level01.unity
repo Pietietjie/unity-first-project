@@ -263,6 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbde577bf542ae6499fdbd546c191f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleMovement: {fileID: 0}
+  playerMovement: {fileID: 402897401}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +567,7 @@ GameObject:
   - component: {fileID: 2136578675}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
