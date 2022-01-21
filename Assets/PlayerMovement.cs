@@ -13,6 +13,6 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate is like update but works better with phisics
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, 2000 * Time.deltaTime);        
+        rb.AddForce(0, 0, 500 * Time.deltaTime);        
     }
 }
