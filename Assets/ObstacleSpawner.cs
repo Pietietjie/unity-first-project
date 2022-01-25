@@ -8,13 +8,13 @@ public class ObstacleSpawner : MonoBehaviour
 
     public List<Vector3[]> layoutPresets = new List<Vector3[]> {
         new Vector3[] {
-            new Vector3(4, 1f, 0f),
-            new Vector3(-4, 1f, 0f)
+            new Vector3(4f, 1f, 0f),
+            new Vector3(-4f, 1f, 0f)
         },
         new Vector3[] {
-            new Vector3(0, 1f, 0f),
-            new Vector3(0, 1f, 0f),
-            new Vector3(-4, 1f, 0f)
+            new Vector3(0f, 1f, 0f),
+            new Vector3(-2f, 1f, 0f),
+            new Vector3(-4f, 1f, 0f)
         }
     };
 
