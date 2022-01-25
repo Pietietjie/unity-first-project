@@ -6,9 +6,11 @@ public class ObstacleMovement : MonoBehaviour
 {
     public Rigidbody obstacleRigidBody;
 
-    void Update()
+    public float obstacleSpeed;
+
+    void FixedUpdate()
     {
-        obstacleRigidBody.AddForce(0, 0, -500 * Time.deltaTime);        
+        obstacleRigidBody.AddForce(0, 0, -obstacleSpeed * Time.deltaTime);        
     }
 
 }
