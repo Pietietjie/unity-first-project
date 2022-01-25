@@ -15,6 +15,25 @@ public class ObstacleSpawner : MonoBehaviour
             new Vector3(0f, 1f, 0f),
             new Vector3(-2f, 1f, 0f),
             new Vector3(-4f, 1f, 0f)
+        },
+        new Vector3[] {
+            new Vector3(0f, 1f, 0f),
+            new Vector3(1f, 1f, 0f)
+        },
+        new Vector3[] {
+            new Vector3(4f, 1f, 0f),
+            new Vector3(3f, 1f, 0f),
+            new Vector3(2f, 1f, 0f),
+            new Vector3(-4f, 1f, 0f)
+        },
+        new Vector3[] {
+            new Vector3(4f, 1f, 0f),
+            new Vector3(3f, 1f, 1f),
+            new Vector3(2f, 1f, 2f),
+            new Vector3(1f, 1f, 3f),
+            new Vector3(0f, 1f, 4f),
+            new Vector3(-1f, 1f, 5f),
+            new Vector3(-2f, 1f, 6f)
         }
     };
 
