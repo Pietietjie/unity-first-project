@@ -15,11 +15,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKey("d")) {
-            playerRigidBody.AddForce(dodgeSpeed * Time.deltaTime, 0, 0);
+            playerRigidBody.AddForce(dodgeSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("a")) {
-            playerRigidBody.AddForce(-dodgeSpeed * Time.deltaTime, 0, 0);
+            playerRigidBody.AddForce(-dodgeSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
         }
     }
