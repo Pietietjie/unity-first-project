@@ -7,13 +7,15 @@ public class PlayerScore : MonoBehaviour
 {
     private float currentTime = 0f;
     private bool timerStart = false;
-    public float highScore = 0;
+    public float highScore;
     public Text currentTimeText;
     public Text highScoreText;
 
     // Start is called before the first frame update
     void Start()
     {
+        highScore = PlayerPrefs.GetFloat("highScore");
+        UpdateHighScoreUI();
         StartTimer();
     }
 
@@ -22,12 +24,12 @@ public class PlayerScore : MonoBehaviour
     {
         if (timerStart) {
             currentTime += Time.deltaTime;
-            UpdateTimerComponent();
-            SaveHighScore(currentTime);
+            UpdateTimerUI();
+            UpdateHighScore(currentTime);
         }
     }
 
-    void UpdateTimerComponent()
+    void UpdateTimerUI()
     {
         currentTimeText.text = ToDigitalClockStringFormat(currentTime);
     }
@@ -41,15 +43,27 @@ public class PlayerScore : MonoBehaviour
     {
         timerStart = false;
         currentTime = 0f;
-        UpdateTimerComponent();
+        UpdateTimerUI();
+        SaveHighScore();
     }
 
-    void SaveHighScore(float timeInSeconds)
+    void UpdateHighScore(float timeInSeconds)
     {
         if (timeInSeconds > highScore) {
             highScore = timeInSeconds;
-            highScoreText.text = ToDigitalClockStringFormat(highScore);
+            UpdateHighScoreUI();
         }
+    }
+
+    void UpdateHighScoreUI()
+    {
+        highScoreText.text = ToDigitalClockStringFormat(highScore);
+    }
+
+    void SaveHighScore()
+    {
+        PlayerPrefs.SetFloat("highScore", highScore);
+        PlayerPrefs.Save();
     }
 
     string ToDigitalClockStringFormat(float timeInSeconds)
