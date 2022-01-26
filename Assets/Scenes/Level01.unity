@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highScore: 0
   currentTimeText: {fileID: 39267358}
+  highScoreText: {fileID: 442001911}
 --- !u!114 &34312612
 MonoBehaviour:
   m_ObjectHideFlags: 0
