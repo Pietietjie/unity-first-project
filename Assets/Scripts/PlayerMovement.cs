@@ -22,5 +22,9 @@ public class PlayerMovement : MonoBehaviour
             playerRigidBody.AddForce(-dodgeSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
         }
+
+        if (playerRigidBody.position.y < 0.75f ) {
+            FindObjectOfType<GameStateManager>().EndRun();
+        }
     }
 }
