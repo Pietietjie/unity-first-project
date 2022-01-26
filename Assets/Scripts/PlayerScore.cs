@@ -9,6 +9,7 @@ public class PlayerScore : MonoBehaviour
     private bool timerStart = false;
     public float highScore = 0;
     public Text currentTimeText;
+    public Text highScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PlayerScore : MonoBehaviour
         if (timerStart) {
             currentTime += Time.deltaTime;
             UpdateTimerComponent();
+            SaveHighScore(currentTime);
         }
     }
 
@@ -30,15 +32,14 @@ public class PlayerScore : MonoBehaviour
         currentTimeText.text = ToDigitalClockStringFormat(currentTime);
     }
 
-    void StartTimer()
+    public void StartTimer()
     {
         timerStart = true;
     }
 
-    void StopTimer()
+    public void StopTimer()
     {
         timerStart = false;
-        SaveHighScore(currentTime);
         currentTime = 0f;
         UpdateTimerComponent();
     }
@@ -47,6 +48,7 @@ public class PlayerScore : MonoBehaviour
     {
         if (timeInSeconds > highScore) {
             highScore = timeInSeconds;
+            highScoreText.text = ToDigitalClockStringFormat(highScore);
         }
     }
 
