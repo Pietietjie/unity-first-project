@@ -1,5 +1,4 @@
 # First project
-My first unity project ever for learning purposes only
-
-## Notes:
-This command adds a .gitignore template for Unity `curl https://raw.githubusercontent.com/github/gitignore/master/Unity.gitignore --output .gitignore`
+My first unity project for learning purposes only
+Losely based on Brackey's "How to make a Video Game in Unity" series
+https://www.youtube.com/watch?v=IlKaB1etrik
